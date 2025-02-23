@@ -1,0 +1,24 @@
+{% extends "student/base.html" %}
+
+{% block head %}
+<title>Student Home</title>
+{% comment %} <link rel="stylesheet" href="/static/student/student_home.css"> {% endcomment %}
+
+ <style>
+    body{
+        background-color: rebeccapurple;
+    }
+    h1{
+        color: yellowgreen;
+    }
+</style> 
+{% endblock head %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>Welcome To  Home Page Mr/Mis {{user.username}}</h1>
+{% else %}
+<h1>Home Page</h1>
+{% endif %}
+{% endblock content %}
